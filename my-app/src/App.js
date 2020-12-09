@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import WelComeStateUse from './Component/State/WelComeStateUse';
+import Seststate from './Component/State/Sestste';
 
 
 
 function App() {
   return (
     <div >
-      <WelComeStateUse/>
+      <Seststate/>
     </div>
   );
 }

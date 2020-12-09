@@ -8,7 +8,12 @@ class WelComeStateUse extends Component{
             name:"rayhan",//proparti:value
             age:30,
             hobi:'reading books',
-            class: [10 ,11, 12]
+            class: [10 ,11, 12], //aarary
+            height:{
+                class7:'30kg',
+                class8:['40kg','55kg','70kg'],
+                class9:'45kg'
+            }
         }
     }
 
@@ -24,6 +29,8 @@ class WelComeStateUse extends Component{
                  
                    {/* // arrary object state */}
                    <h2>{this.state.class[0]}</h2>  
+                   <h2>{this.state.class7}</h2>  
+                   <h2>{this.state.class8[1]}</h2>  
             </div>
             </div>
         );
