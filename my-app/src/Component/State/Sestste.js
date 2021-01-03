@@ -14,7 +14,7 @@ class Sestste extends Component{
     }
     onchange(){
         this.setState({
-            massege:'thank you'
+            massege:'thank you' //object change with function
         })
     }
     render(){
