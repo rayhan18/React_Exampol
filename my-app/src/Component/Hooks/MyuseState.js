@@ -1,5 +1,5 @@
-import React from 'react'
-import {useState}from 'react'
+import React,{useState} from 'react'
+
 export default function MyuseState() {
     
     const[count,setCount]= useState(0);
@@ -8,6 +8,7 @@ export default function MyuseState() {
         <div>
             <h2>count:{count}</h2>
             <button onClick={hendel}>incriment</button>
+
         </div>
     ) 
 }
