@@ -5,7 +5,7 @@ function FunctionalPropse(props){
 
 
     return(
-        <div>
+        <div className="App">
         <h1>name:{props.name} age:{props.age}</h1>
        <ul>
            {
