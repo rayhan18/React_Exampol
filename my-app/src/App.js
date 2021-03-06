@@ -7,6 +7,7 @@ import FunctionalComponent from './Component/Function/FunctionalComponent';
 
 import Dinamictest from './Component/Dinamictest';
 import MyuseState from './Component/Hooks/MyuseState';
+import Jsplaceholder from './Component/apiTest/Jsplaceholder';
 
 
 
@@ -21,7 +22,16 @@ function App() {
     {name:'adovixd',price:'$500'},
     {name:'photoshop',price:'$200'},
     {name:'illastator',price:'$800'},
-    {name:'adovixd',price:'$500'}
+    {name:'adovixd',price:'$500'},
+    {name:'photoshop',price:'$200'},
+    {name:'illastator',price:'$800'},
+    {name:'adovixd',price:'$500'},
+    {name:'photoshop',price:'$200'},
+    {name:'illastator',price:'$800'},
+    {name:'adovixd',price:'$500'},
+    {name:'photoshop',price:'$200'},
+    {name:'illastator',price:'$800'},
+    {name:'adovixd',price:'$500'},
   ]
   return (
     <div >
@@ -35,7 +45,7 @@ function App() {
         products.map(product=> <Dinamictest product={product}></Dinamictest>)
       }
       <MyuseState/>
-      
+      <Jsplaceholder/>
     </div>
   );
 }
