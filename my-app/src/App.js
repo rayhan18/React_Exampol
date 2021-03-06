@@ -10,6 +10,7 @@ import MyuseState from './Component/Hooks/MyuseState';
 
 
 
+
 function App() {
   const products=[
     {name:'photoshop',price:'$200'},
@@ -34,6 +35,7 @@ function App() {
         products.map(product=> <Dinamictest product={product}></Dinamictest>)
       }
       <MyuseState/>
+      
     </div>
   );
 }
