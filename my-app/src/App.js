@@ -13,6 +13,7 @@ import Jsplaceholder from './Component/apiTest/Jsplaceholder';
 
 
 function App() {
+
   const products=[
     {name:'photoshop',price:'$200'},
     {name:'illastator',price:'$800'},
@@ -46,8 +47,10 @@ function App() {
       }
       <MyuseState/>
       <Jsplaceholder/>
+     
     </div>
   );
+ 
 }
 
 export default App;
