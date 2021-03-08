@@ -10,6 +10,7 @@ import MyuseState from './Component/Hooks/MyuseState';
 import Jsplaceholder from './Component/apiTest/Jsplaceholder';
 
 import Maping from './Component/mapTest/Maping'
+import OnClickImgChang from './Component/OnClickImgChang/OnClickImgChang';
 
 
 
@@ -50,7 +51,7 @@ function App() {
            <MyuseState/>
       <Jsplaceholder/>
        <Maping/>
-       
+       <OnClickImgChang/>
     </div>
   );
  
