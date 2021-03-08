@@ -9,6 +9,8 @@ import Dinamictest from './Component/Dinamictest';
 import MyuseState from './Component/Hooks/MyuseState';
 import Jsplaceholder from './Component/apiTest/Jsplaceholder';
 
+import Maping from './Component/mapTest/Maping'
+
 
 
 
@@ -45,9 +47,10 @@ function App() {
       {
         products.map(product=> <Dinamictest product={product}></Dinamictest>)
       }
-      <MyuseState/>
+           <MyuseState/>
       <Jsplaceholder/>
-     
+       <Maping/>
+       
     </div>
   );
  

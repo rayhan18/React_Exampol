@@ -29,6 +29,7 @@ export default function Jsplaceholder(props) {
             <Counters name2={setUsers.data}></Counters> 
              {/* //not working */}
             <testing howmany={users.id}>something 2{users.id}</testing>
+           
         </div>
     )
     
@@ -56,5 +57,7 @@ function dynamicData(){
         {name:'pinaple',color:'yolow'},
         {name:'jecfruite',color:'yolow'},
     ]
-    
+    return(
+        frots.map(frot=> <h2>{frot.name}</h2>)
+    )
 }
