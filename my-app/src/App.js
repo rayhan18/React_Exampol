@@ -11,6 +11,9 @@ import Jsplaceholder from './Component/apiTest/Jsplaceholder';
 
 import Maping from './Component/mapTest/Maping'
 import OnClickImgChang from './Component/OnClickImgChang/OnClickImgChang';
+import EcomNavbar from './Component/Ecommarce/EcomNavbar';
+import HeaderEmajon from './Component/Ecommarce/HeaderEmajon';
+import Covid19 from './Component/ApiCovid19/Covid19';
 
 
 
@@ -39,19 +42,23 @@ function App() {
   ]
   return (
     <div >
-      <Seststate/>
+       {/* <EcomNavbar/>
+       <HeaderEmajon/> */}
+      {/* <Seststate/>
       <FunctionalPropse name='rayhan'age='25'/>
       <ClassComponentProps name='rayhan'/>
       <FunctionalComponent name='rayhan' age='30' learn='react'/>
       <FunctionalComponent name='rayhan' age='30' learn='react'/>
-      <FunctionalComponent name='rayhan' age='30' learn='react'/>
-      {
+      <FunctionalComponent name='rayhan' age='30' learn='react'/> */}
+      {/* {
         products.map(product=> <Dinamictest product={product}></Dinamictest>)
-      }
-           <MyuseState/>
-      <Jsplaceholder/>
-       <Maping/>
-       <OnClickImgChang/>
+      } */}
+            {/* <MyuseState/>
+       <Jsplaceholder/>
+        <Maping/>
+        <OnClickImgChang/>
+     */}
+      <Covid19/>
     </div>
   );
  

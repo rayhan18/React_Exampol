@@ -1,54 +1,60 @@
 import React, { Component } from 'react'
-import require from 'react'
 import belt from '../../Imges/belt.jpg'
 import keyring from '../../Imges/keyring.jpg'
 import ladiesBag from '../../Imges/ladiesBag.jpg'
-import sideBag from '../../Imges/sideBag.jpg'
 
 export default class OnClickImgChang extends Component {
-    constructor(){
-        super()
-        this.state={
-            index:0,
-            imageList:['img0','img1','img2','img3']
-        }
-        this.OnClickImgChang=this.OnClickImgChang.bind(this)
-        this.OnClickImgBack=this.OnClickImgChang.bind(this)
+ constructor(){
+     super()
+     this.state={
 
-        const img0= require('./Imges/belt.jpg')
-        const img1= require('./Imges/keyging.jpg')
-        const img2= require('./Imges/lsfirdBag.jpg')
-        const img3=require('./Imges/sideBag.jpg')
-        
-        
-    }
-    OnClickImgChang(){
-        if(this.state.index +1  === this.state.imageList.length){
-            this.setState({index:0})
-        }else{
-            this.setState({
-               index: this.state.index +1
-            })
+     }
+     this.conchangeImage=this.onchangeImage.bind(this)
+    
+ }
+
+    onchangeImage(e){
+        console.log(e)
+        const thumbs =document.querySelector('.thams-img').children
+        document.querySelector('.pro-img').src= e.children[0].src
+       
+        for(let i=0; i<thumbs.length;i++){
+            thumbs[i].classList.remove('active')
         }
-    }
-    OnClickImgBack(){
-        if(this.state.index -1 === -1){
-            this.setState({
-                index:this.state.index -1
-            })
-        }else{
-            this.setState({
-                index:this.state.index-1
-            })
-        }
-    }
-   
+        e.classlistToaddClass('active')
+    
+    };
     render() {
+        const mystyle={
+            width:'200px',
+            height:'200px',
+            marginLeft: '300px'
+        }
+        const divStyle={
+            width:'80px',
+            height:'80px',
+            display:'inline-block'
+        }
+        const divImg={
+            width:'80px'
+        }
         return (
             <div>
-                <img src={this.state.imageList[this.state.index]} />
-                <button onClick={this.OnClickImgChang}> imagechange</button>
-                <button onClick={this.OnClickImgBack}> imageback</button>
+               <div className='por-img'>
+                   <img style={mystyle} src={belt} alt="belt"/>
+                   </div> 
+                   <div className='thams-img'>
+                       <div style={divStyle}  >
+                       <img style={divImg} onClick={this.onchangeImage}src={belt} alt="belt"/>
+                       </div> 
+                            <div style={divStyle} >
+                            <img style={divImg} onClick={this.onchangeImage} src={keyring} alt="belt"/>
+                            </div>
+                        <div style={divStyle}  >
+                        <img style={divImg} onClick={this.onchangeImage} src={ladiesBag} alt="belt"/>
+                        </div>
+                  
+                   </div>
             </div>
         )
     }

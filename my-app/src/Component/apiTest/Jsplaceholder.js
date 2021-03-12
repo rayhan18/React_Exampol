@@ -50,7 +50,7 @@ function Counters(props) {
 }
 
 function dynamicData(){
-    const frots=[
+    const fruts=[
         {name:'banana',color:'yolow'},
         {name:'mango',color:'red'},
         {name:'orenge',color:'yolow'},
@@ -58,6 +58,6 @@ function dynamicData(){
         {name:'jecfruite',color:'yolow'},
     ]
     return(
-        frots.map(frot=> <h2>{frot.name}</h2>)
+        fruts.map(frot=> <h2>{frut.name}</h2>)
     )
 }
