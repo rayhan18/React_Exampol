@@ -53,12 +53,12 @@ function App() {
       {/* {
         products.map(product=> <Dinamictest product={product}></Dinamictest>)
       } */}
-            {/* <MyuseState/>
+             {/* <MyuseState/>
        <Jsplaceholder/>
-        <Maping/>
+        <Maping/> */}
         <OnClickImgChang/>
-     */}
-      <Covid19/>
+     
+     
     </div>
   );
  

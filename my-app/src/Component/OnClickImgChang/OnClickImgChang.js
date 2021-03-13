@@ -14,14 +14,16 @@ export default class OnClickImgChang extends Component {
  }
 
     onchangeImage(e){
-        console.log(e)
-        const thumbs =document.querySelector('.thams-img').children
-        document.querySelector('.pro-img').src= e.children[0].src
+   console.log(e.target.value)
+    console.log(e.target.outerHTML)
+    // document.querySelector('.pro-img').src= e.target.outerHTML
+        // const thumbs =document.querySelector('.thams-img').children
+        // document.querySelector('.pro-img').src= e.children[0].src
        
-        for(let i=0; i<thumbs.length;i++){
-            thumbs[i].classList.remove('active')
-        }
-        e.classlistToaddClass('active')
+        // for(let i=0; i<thumbs.length;i++){
+        //     thumbs[i].classList.remove('active')
+        // }
+        // e.classlistToaddClass('active')
     
     };
     render() {
@@ -45,13 +47,13 @@ export default class OnClickImgChang extends Component {
                    </div> 
                    <div className='thams-img'>
                        <div style={divStyle}  >
-                       <img style={divImg} onClick={this.onchangeImage}src={belt} alt="belt"/>
+                       <img style={divImg} onClick={(e)=>this.onchangeImage(e)}src={belt} alt="belt"/>
                        </div> 
                             <div style={divStyle} >
-                            <img style={divImg} onClick={this.onchangeImage} src={keyring} alt="belt"/>
+                            <img style={divImg} onClick={(e)=>this.onchangeImage(e)} src={keyring} alt="belt"/>
                             </div>
                         <div style={divStyle}  >
-                        <img style={divImg} onClick={this.onchangeImage} src={ladiesBag} alt="belt"/>
+                        <img style={divImg} onClick={(e)=>this.onchangeImage(e)} src={ladiesBag} alt="belt"/>
                         </div>
                   
                    </div>
