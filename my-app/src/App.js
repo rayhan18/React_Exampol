@@ -14,6 +14,7 @@ import OnClickImgChang from './Component/OnClickImgChang/OnClickImgChang';
 import EcomNavbar from './Component/Ecommarce/EcomNavbar';
 import HeaderEmajon from './Component/Ecommarce/HeaderEmajon';
 import Covid19 from './Component/ApiCovid19/Covid19';
+import MagnifyImage from './Component/OnClickImgChang/magnifyImage';
 
 
 
@@ -58,7 +59,7 @@ function App() {
         <Maping/> */}
         <OnClickImgChang/>
      
-     
+         <MagnifyImage/>
     </div>
   );
  
