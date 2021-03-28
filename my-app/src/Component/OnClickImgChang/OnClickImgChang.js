@@ -7,23 +7,14 @@ export default class OnClickImgChang extends Component {
  constructor(){
      super()
      this.state={
-
+      img:''
      }
      this.conchangeImage=this.onchangeImage.bind(this)
     
  }
 
-    onchangeImage(e){
-   console.log(e.target.value)
-    console.log(e.target.outerHTML)
-    // document.querySelector('.pro-img').src= e.target.outerHTML
-        // const thumbs =document.querySelector('.thams-img').children
-        // document.querySelector('.pro-img').src= e.children[0].src
-       
-        // for(let i=0; i<thumbs.length;i++){
-        //     thumbs[i].classList.remove('active')
-        // }
-        // e.classlistToaddClass('active')
+    onchangeImage(){
+     this.setState()
     
     };
     render() {

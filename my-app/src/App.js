@@ -15,6 +15,7 @@ import EcomNavbar from './Component/Ecommarce/EcomNavbar';
 import HeaderEmajon from './Component/Ecommarce/HeaderEmajon';
 import Covid19 from './Component/ApiCovid19/Covid19';
 import MagnifyImage from './Component/OnClickImgChang/magnifyImage';
+import ImageSetstate from './Component/State/ImageSetstate';
 
 
 
@@ -51,15 +52,15 @@ function App() {
       <FunctionalComponent name='rayhan' age='30' learn='react'/>
       <FunctionalComponent name='rayhan' age='30' learn='react'/>
       <FunctionalComponent name='rayhan' age='30' learn='react'/> */}
-      {/* {
+      {
         products.map(product=> <Dinamictest product={product}></Dinamictest>)
-      } */}
-             {/* <MyuseState/>
+      }
+             <MyuseState/>
        <Jsplaceholder/>
-        <Maping/> */}
+        <Maping/>
         <OnClickImgChang/>
-     
-         <MagnifyImage/>
+       <ImageSetstate/>
+         {/* <MagnifyImage/> */}
     </div>
   );
  
