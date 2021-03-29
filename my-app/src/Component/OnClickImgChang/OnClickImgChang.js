@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Container } from 'react-bootstrap'
 import belt from '../../Imges/belt.jpg'
 import keyring from '../../Imges/keyring.jpg'
 import ladiesBag from '../../Imges/ladiesBag.jpg'
@@ -7,14 +8,18 @@ export default class OnClickImgChang extends Component {
  constructor(){
      super()
      this.state={
-      img:''
-     }
-     this.conchangeImage=this.onchangeImage.bind(this)
+        images:[
+            "https://image.shutterstock.com/image-photo/riyadh-saudi-capital-main-financial-260nw-1490705324.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFxpa0rr790u_Kf0uewWUFumoq6B-1VH73j8SZFovX1ISjET8QYq3bQeFoHsPfy_cNJZc&usqp=CAU",
+           "http://p5cdn4static.sharpschool.com/UserFiles/Servers/Server_3162582/Image/imagekw5.jpg"
+         ],
+      index1:0
     
+       }
+      this.conchangeImage=this.onchangeImage.bind(this)
  }
-
     onchangeImage(){
-     this.setState()
+     this.setState({index1:this.state.images[0]})
     
     };
     render() {
@@ -33,10 +38,26 @@ export default class OnClickImgChang extends Component {
         }
         return (
             <div>
-               <div className='por-img'>
-                   <img style={mystyle} src={belt} alt="belt"/>
-                   </div> 
-                   <div className='thams-img'>
+               <Container className='por-img'>
+                   <img id="eee" style={mystyle} src={this.state.images[0]} alt="belt"/>
+                   </Container> 
+                   <Container className='thams-img'>
+
+                    <div>
+                        <img onClick={this.onchangeImage} src={this.state.images[1]}/>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
                        <div style={divStyle}  >
                        <img style={divImg} onClick={(e)=>this.onchangeImage(e)}src={belt} alt="belt"/>
                        </div> 
@@ -47,7 +68,7 @@ export default class OnClickImgChang extends Component {
                         <img style={divImg} onClick={(e)=>this.onchangeImage(e)} src={ladiesBag} alt="belt"/>
                         </div>
                   
-                   </div>
+                   </Container>
             </div>
         )
     }
