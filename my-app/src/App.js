@@ -1,3 +1,4 @@
+import {StoreProvider,createStore,action}from 'easy-peasy'
 import React from 'react';
 import './App.css';
 import Seststate from './Component/State/Sestste';
@@ -16,11 +17,21 @@ import HeaderEmajon from './Component/Ecommarce/HeaderEmajon';
 import Covid19 from './Component/ApiCovid19/Covid19';
 import MagnifyImage from './Component/OnClickImgChang/magnifyImage';
 import ImageSetstate from './Component/State/ImageSetstate';
+import LoginButton from './Component/LoginButton/LoginButton';
+
+
 
 
 
 
 function App() {
+
+  const store = createStore({
+    todos: ['Create store', 'Wrap application', 'Use store'],
+    addTodo: action((state, payload) => {
+      state.todos.push(payload);
+    }),
+  });
 
   const products=[
     {name:'photoshop',price:'$200'},
@@ -42,8 +53,9 @@ function App() {
     {name:'illastator',price:'$800'},
     {name:'adovixd',price:'$500'},
   ]
+  const numbers = [1, 2, 3, 4, 5];
   return (
-    <div >
+    <StoreProvider store={store}>
        {/* <EcomNavbar/>
        <HeaderEmajon/> */}
       {/* <Seststate/>
@@ -61,7 +73,9 @@ function App() {
         <OnClickImgChang/>
        <ImageSetstate/>
          {/* <MagnifyImage/> */}
-    </div>
+       <LoginButton numbers={numbers}/>
+       
+    </StoreProvider>
   );
  
 }
