@@ -18,6 +18,7 @@ import Covid19 from './Component/ApiCovid19/Covid19';
 import MagnifyImage from './Component/OnClickImgChang/magnifyImage';
 import ImageSetstate from './Component/State/ImageSetstate';
 import LoginButton from './Component/LoginButton/LoginButton';
+import ZoomImage from './Component/ZoomImg/ZoomImage';
 
 
 
@@ -72,9 +73,9 @@ function App() {
         <Maping/>
         <OnClickImgChang/>
        <ImageSetstate/>
-         {/* <MagnifyImage/> */}
+         <MagnifyImage/>
        <LoginButton numbers={numbers}/>
-       
+       <ZoomImage/>
     </StoreProvider>
   );
  

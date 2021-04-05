@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container,Row,Col } from 'react-bootstrap'
 import belt from '../../Imges/belt.jpg'
 import keyring from '../../Imges/keyring.jpg'
 import ladiesBag from '../../Imges/ladiesBag.jpg'
-
+import ReactDOM from 'react-dom'
 export default class OnClickImgChang extends Component {
  constructor(){
      super()
@@ -17,11 +17,18 @@ export default class OnClickImgChang extends Component {
     
        }
       this.conchangeImage=this.onchangeImage.bind(this)
+      this.imageHendel=this.imageHendel.bind(this)
  }
     onchangeImage(){
      this.setState({index1:this.state.images[0]})
     
     };
+
+    imageHendel(event){
+        let imgSrc=event.target.getAttribute('src')
+        let priviewImg = document.getElementById('priviewImg')
+        ReactDOM.findDOMNode(priviewImg).setAttribute('src',imgSrc)
+    }
     render() {
         const mystyle={
             width:'200px',
@@ -68,7 +75,36 @@ export default class OnClickImgChang extends Component {
                         <img style={divImg} onClick={(e)=>this.onchangeImage(e)} src={ladiesBag} alt="belt"/>
                         </div>
                   
-                   </Container>
+
+
+
+
+
+
+
+                   </Container><hr/>
+{/* =========================================onclick img changge */}
+    <Container>
+        <Row>
+            <Col>
+            <img style={divImg}className="w-50" onClick={this.imageHendel}src={belt} alt="belt"/>
+           
+           
+            <Row>
+                <Col>
+                <img style={divImg} onClick={this.imageHendel}src={belt} alt="belt"/>
+                </Col>
+                <Col>
+                <img style={divImg} onClick={this.imageHendel}src={keyring} alt="belt"/>
+                </Col>
+                <Col>
+                <img style={divImg} onClick={this.imageHendel}src={ladiesBag} alt="belt"/>
+                </Col>
+            </Row>
+            </Col>
+            
+        </Row><hr/>
+    </Container>
             </div>
         )
     }
