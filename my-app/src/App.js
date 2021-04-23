@@ -20,7 +20,8 @@ import ImageSetstate from './Component/State/ImageSetstate';
 import LoginButton from './Component/LoginButton/LoginButton';
 import ZoomImage from './Component/ZoomImg/ZoomImage';
 
-
+import { ToastContainer} from 'react-toastify';
+import ToastMessage from './Component/ToastMessage/ToastMessage';
 
 
 
@@ -76,6 +77,20 @@ function App() {
          <MagnifyImage/>
        <LoginButton numbers={numbers}/>
        <ZoomImage/>
+       <ToastMessage/>
+       <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            />
+{/* Same as */}
+<ToastContainer />
     </StoreProvider>
   );
  
