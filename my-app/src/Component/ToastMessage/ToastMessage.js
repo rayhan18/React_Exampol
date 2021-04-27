@@ -15,6 +15,8 @@ export default class ToastMessage extends Component {
             <div className='app'>
                 <h1>toast</h1>
                 <Button onClick={this.toastAlert}>Toast </Button>
+        
+
             </div>
         )
     }

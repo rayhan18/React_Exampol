@@ -22,6 +22,7 @@ import ZoomImage from './Component/ZoomImg/ZoomImage';
 
 import { ToastContainer} from 'react-toastify';
 import ToastMessage from './Component/ToastMessage/ToastMessage';
+import GoogleMap from './Component/GoogleMaps';
 
 
 
@@ -91,6 +92,7 @@ function App() {
             />
 {/* Same as */}
 <ToastContainer />
+  <GoogleMap/>
     </StoreProvider>
   );
  
