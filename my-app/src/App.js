@@ -1,10 +1,6 @@
 import {StoreProvider,createStore,action}from 'easy-peasy'
 import React from 'react';
 import './App.css';
-import Seststate from './Component/State/Sestste';
-import FunctionalPropse from './Component/FunctionalPropse';
-import ClassComponentProps from './Component/ClassComponentProps';
-import FunctionalComponent from './Component/Function/FunctionalComponent';
 
 import Dinamictest from './Component/Dinamictest';
 import MyuseState from './Component/Hooks/MyuseState';
@@ -12,9 +8,7 @@ import Jsplaceholder from './Component/apiTest/Jsplaceholder';
 
 import Maping from './Component/mapTest/Maping'
 import OnClickImgChang from './Component/OnClickImgChang/OnClickImgChang';
-import EcomNavbar from './Component/Ecommarce/EcomNavbar';
-import HeaderEmajon from './Component/Ecommarce/HeaderEmajon';
-import Covid19 from './Component/ApiCovid19/Covid19';
+
 import MagnifyImage from './Component/OnClickImgChang/magnifyImage';
 import ImageSetstate from './Component/State/ImageSetstate';
 import LoginButton from './Component/LoginButton/LoginButton';
@@ -23,10 +17,11 @@ import ZoomImage from './Component/ZoomImg/ZoomImage';
 import { ToastContainer} from 'react-toastify';
 import ToastMessage from './Component/ToastMessage/ToastMessage';
 import GoogleMap from './Component/GoogleMaps';
-
-
-
-
+import ImagLoder from './Component/Loder/ImagLoder';
+ import  AutocomplateForm from './Component/Autoconplate/AutocomplateForm'
+import SearchAutoComplate from './Component/Autoconplate//Searchmenual/SearchAutoComplate'
+import Props from './Component/Props/Props'
+import Hook1 from"./Component/Hooks/Hook1"
 function App() {
 
   const store = createStore({
@@ -90,10 +85,17 @@ function App() {
             draggable
             pauseOnHover
             />
+              <ImagLoder/>
 {/* Same as */}
 <ToastContainer />
+
   <GoogleMap/>
+  <AutocomplateForm/>
+  <SearchAutoComplate/>
+  <Props name="Rayhan"/>
+  <Hook1/>
     </StoreProvider>
+ 
   );
  
 }

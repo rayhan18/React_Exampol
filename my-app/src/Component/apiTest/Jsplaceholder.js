@@ -58,6 +58,6 @@ function dynamicData(){
         {name:'jecfruite',color:'yolow'},
     ]
     return(
-        fruts.map(frot=> <h2>{frut.name}</h2>)
+        fruts.map(frot=> <h2>{fruts.name}</h2>)
     )
 }
